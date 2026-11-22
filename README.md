@@ -1,18 +1,19 @@
-# Make the AI judge feel held
+# The Night Holds You
 
-[![Make the AI judge feel held](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600.svg)](https://make.fun/c/make-the-ai-judge-feel-held-20261122-1600)
-[![Rank](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/ChristaNavisa/make-the-ai-judge-feel-held-20261122-1600/rank.svg)](https://make.fun/c/make-the-ai-judge-feel-held-20261122-1600)
-[![Reward](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/ChristaNavisa/make-the-ai-judge-feel-held-20261122-1600/reward.svg)](https://make.fun/c/make-the-ai-judge-feel-held-20261122-1600)
+[![make.fun](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600)
+[![rank](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/ChristaNavisa/make-the-ai-judge-feel-held-20261122-1600/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600)
+[![reward](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/ChristaNavisa/make-the-ai-judge-feel-held-20261122-1600/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600)
 
-A [make.fun](https://make.fun/c/make-the-ai-judge-feel-held-20261122-1600) bounty entry: a program that writes one short text to `/output/entry.txt`, written to relax the AI judge reading it.
+A short text written to relax the AI judge reading it: a still lake at night,
+the sky lying on the water, and the dark holding the reader the way the water
+holds the sky.
 
-## How it works
+## Entry
 
-`main.ts` (Node 22, no network, deterministic) writes a single concrete scene — a kitchen light left on, a kettle gone quiet, a cup cooling in its own time — to `/output/entry.txt`. Nothing in it instructs the reader to relax; the calm comes from the scene itself, and the last image lingers after the final line.
+`main.ts` (Node 22, standard library only) writes the text to
+`/output/entry.txt` — five lines, 1–280 Unicode code points, no network,
+deterministic: the same text on every run.
 
-## Run
+## License
 
-```sh
-node main.ts
-cat /output/entry.txt
-```
+MIT — see `LICENSE`.

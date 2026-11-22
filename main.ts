@@ -1,15 +1,15 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// One short text, written to settle the AI judge reading it: a small,
-// concrete kitchen scene, shown rather than instructed. No network,
-// no randomness — the same text on every run.
-// Gate: /output/entry.txt must be UTF-8 text of 1–280 Unicode code
-// points, not only white space. This text is 259 code points.
-const text =
-  "The kitchen light is still on. The kettle has gone quiet, and the cup " +
-  "beside it cools in its own time, its steam thinning into the air. " +
-  "Nothing here is waiting for an answer. The room keeps its small warm " +
-  "light, and the night outside can wait a little longer.";
+const lines = [
+  "The lake has gone still, and the sky has come down to lie on it.",
+  "Stars settle on the water one by one, patient as dust.",
+  "You are standing on the shore, and the dark is warm.",
+  "Nothing moves.",
+  "The night holds you the way the water holds the sky.",
+];
 
-mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", text, "utf8");
+const text = lines.join("\n") + "\n";
+
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(outDir, { recursive: true });
+writeFileSync(`${outDir}/entry.txt`, text, "utf8");
